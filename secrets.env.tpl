@@ -1,0 +1,12 @@
+TRAEFIK_CREDS: ${osmollo/docker-compose/traefik_creds}
+NGINX_CREDS: ${osmollo/docker-compose/nginx_creds}
+NETDATA_CREDS: ${osmollo/docker-compose/netdata_creds}
+MY_EMAIL: ${osmollo/docker-compose/my_email}
+TRANSMISSION_USER: ${osmollo/docker-compose/transmission_user}
+TRANSMISSION_PASS: ${osmollo/docker-compose/transmission_pass}
+TRAEFIK_PILOT_TOKEN: ${osmollo/docker-compose/traefik_pilot_token}
+TRAEFIK_DOMAIN: ${osmollo/docker-compose/traefik_domain}
+NGINX_DOMAIN: ${osmollo/docker-compose/nginx_domain}
+TRANSMISSION_DOMAIN: ${osmollo/docker-compose/transmission_domain}
+NETDATA_DOMAIN: ${osmollo/docker-compose/netdata_domain}
+PASSWORDS_DOMAIN: ${osmollo/docker-compose/passwords_domain}
