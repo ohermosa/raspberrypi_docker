@@ -39,7 +39,6 @@ Necesitaremos los siguientes secretos:
 | `traefik_creds` | credenciales htpasswd para acceso a `TRAEFIK_DOMAIN` (__USER__: admin, __PASS__: `traefik_pass`) |
 | `netdata_domain` | dominio para **NETDATA** |
 | `nginx_domain` | dominio para **NGINX** |
-| `passwords_domain` | dominio para **PASSWORDS** |
 | `traefik_domain` | dominio para **TRAEFIK** |
 | `transmission_domain` | dominio para **TRANSMISSION** |
 
@@ -99,7 +98,7 @@ secrethub read ${SECRETHUB_USERNAME}/docker-compose/nginx_creds
 
 ```bash
 echo $EMAIL | secrethub write ${SECRETHUB_USERNAME}/docker-compose/my_email
-echo $PILON_TOKEN | secrethub write ${SECRETHUB_USERNAME}/docker-compose/traefik_pilot_token
+echo $PILOT_TOKEN | secrethub write ${SECRETHUB_USERNAME}/docker-compose/traefik_pilot_token
 echo $TRANSMISSION_USER | secrethub write ${SECRETHUB_USERNAME}/docker-compose/transmission_user
 secrethub generate rand ${SECRETHUB_USERNAME}/docker-compose/transmission_pass
 ```

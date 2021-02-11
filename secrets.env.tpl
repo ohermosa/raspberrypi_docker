@@ -9,4 +9,3 @@ TRAEFIK_DOMAIN: ${osmollo/docker-compose/traefik_domain}
 NGINX_DOMAIN: ${osmollo/docker-compose/nginx_domain}
 TRANSMISSION_DOMAIN: ${osmollo/docker-compose/transmission_domain}
 NETDATA_DOMAIN: ${osmollo/docker-compose/netdata_domain}
-PASSWORDS_DOMAIN: ${osmollo/docker-compose/passwords_domain}

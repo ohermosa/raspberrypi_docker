@@ -117,26 +117,6 @@ services:
       - ./default.conf:/etc/nginx/conf.d/default.conf
       - /datos/log/nginx:/var/log/nginx
 
-  passwords:
-    build: ./password_push/
-    container_name: passwords
-    restart: unless-stopped
-    networks:
-      - traefik_proxy
-      - internal
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.passwords.rule=Host(`$PASSWORDS_DOMAIN`)"
-      - "traefik.http.routers.passwords.entrypoints=https"
-      - "traefik.http.routers.passwords.tls=true"
-      - "traefik.http.routers.passwords.tls.options=default"
-      - "traefik.http.routers.passwords.tls.certresolver=letsencrypt"
-      - "traefik.http.routers.passwords.middlewares=securityheaders"
-      - "traefik.http.services.passwords.loadbalancer.server.port=5000"
-      - "traefik.docker.network=traefik_proxy"
-    expose:
-      - "5000"
-
   netdata:
     image: netdata/netdata
     hostname: $NETDATA_DOMAIN
